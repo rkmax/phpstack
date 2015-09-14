@@ -10,8 +10,8 @@ front:
     - redis:redis
     - elasticsearch:elasticsearch
   volumes:
-    - www:/var/www
-    - sites:/etc/nginx/sites-enabled
+    - ./www:/var/www
+    - ./sites:/etc/nginx/sites-enabled
 
 mysql:
   image: tutum/mysql
