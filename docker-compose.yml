@@ -49,11 +49,3 @@ elasticsearch:
   environment:
     ELASTICSEARCH_USER: admin
     ELASTICSEARCH_PASS: password
-
-shipyard:
-  image: shipyard/deploy
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
-  command: start
-  ports:
-    - "8080:8080"
