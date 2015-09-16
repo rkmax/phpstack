@@ -6,8 +6,6 @@ front:
   links:
     - mysql:mysql
     - mongodb:mongodb
-    - memcached:memcached
-    - redis:redis
     - elasticsearch:elasticsearch
   volumes:
     - ./www:/var/www
@@ -27,20 +25,6 @@ mongodb:
     - "28017:28017"
   environment:
     MONGODB_PASS: password
-
-memcached:
-  image: tutum/memcached
-  ports:
-    - "11211:11211"
-  environment:
-    MEMCACHED_PASS: password
-
-redis:
-  image: tutum/redis
-  ports:
-    - "6379:6379"
-  environment:
-    REDIS_PASS: password
 
 elasticsearch:
   image: tutum/elasticsearch

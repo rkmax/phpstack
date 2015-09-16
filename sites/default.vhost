@@ -41,7 +41,7 @@ server {
     try_files $uri @rewriteapp;
   }
 
-  # Log docker output
-  error_log /dev/fd/2;
-  access_log /dev/fd/1;
+
+  error_log /var/www/logs/error.log;
+  access_log /var/www/logs/access.log;
 }
